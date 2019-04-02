@@ -1,0 +1,10 @@
+.bor {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+}
+
+.shell {
+    padding: 3px;
+    border: 1px solid red;
+}
