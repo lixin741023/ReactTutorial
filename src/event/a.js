@@ -3,15 +3,19 @@ import React from 'react';
 class A_Switch extends React.Component {
     constructor (props) {
         super(props);
-        this.change = this.change.bind(this);
         this.state = {
             whether: true
-        }
+        };
+        this.change = this.change.bind(this);
     }
     change (eve) {
-        this.setState((state) => ({
-            whether: !state.whether
-        }));
+        this.setState((state, props) => {
+            console.log('state:' , state);
+            console.log('props:' , props);
+            return {
+                whether: !state.whether
+            }
+        });
         console.log(eve); // #1
     }
     render () {
